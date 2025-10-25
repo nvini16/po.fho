@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato Rápido</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00aaff;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid #00aaff;
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 20px #00aaff55;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ccff;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #99dfff;
+    }
+
+    input, textarea {
+      background: transparent;
+      border: 1px solid #00aaff;
+      border-radius: 8px;
+      padding: 10px;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00ccff;
+      box-shadow: 0 0 10px #00ccff88;
+    }
+
+    button {
+      background-color: #00aaff;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #00ccff;
+      box-shadow: 0 0 15px #00ccff;
+    }
+
+    .credit {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 12px;
+      color: #0099cc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contato Rápido</h1>
+    <form action="https://formspree.io/f/xxxxxxxx" method="POST">
+      <label for="name">Seu Nome</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Seu E-mail</label>
+      <input type="email" id="email" name="_replyto" required>
+
+      <label for="message">Mensagem</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <p class="credit">Desenvolvido por Dimitri ⚡</p>
+  </div>
+</body>
+</html>
