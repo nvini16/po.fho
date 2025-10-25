@@ -1,0 +1,268 @@
+<!doctype html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio — Georgia Moreno</title>
+  <meta name="description" content="Portfólio literário: frases, poesias e reflexões." />
+  <style>
+    :root{
+      --bg:#000000;
+      --neon:#00e5ff; /* azul neon */
+      --muted:#111216;
+      --glass: rgba(255,255,255,0.03);
+      --accent: rgba(0,229,255,0.08);
+      --text: #e6f7fb;
+      --mono: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--mono);background:linear-gradient(180deg,var(--bg) 0%, #060608 60%);color:var(--text);-webkit-font-smoothing:antialiased}/* Layout */
+.container{max-width:1100px;margin:36px auto;padding:28px}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:58px;height:58px;border-radius:10px;background:linear-gradient(135deg,var(--neon),#006b82);box-shadow:0 8px 24px rgba(0,229,255,0.12),0 0 24px rgba(0,229,255,0.06) inset;display:grid;place-items:center;font-weight:700}
+.brand h1{font-size:1.05rem;margin:0}
+nav{display:flex;gap:12px}
+nav a{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px;font-size:0.93rem}
+nav a:hover{background:var(--glass);box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+.intro{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:26px;border-radius:14px;border:1px solid rgba(0,229,255,0.08);backdrop-filter: blur(6px)}
+.intro h2{margin:0 0 8px 0;letter-spacing:0.6px}
+.intro p.lead{font-size:1.02rem;line-height:1.55;margin-top:10px;color:var(--text)}
+.typewriter{font-family:monospace;color:var(--neon);margin-top:14px}
+
+.card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(255,255,255,0.01));border:1px solid rgba(0,229,255,0.06)}
+.meta{display:flex;justify-content:space-between;align-items:center}
+.actions{display:flex;gap:10px}
+.btn{padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(0,229,255,0.12);cursor:pointer;color:var(--text);font-weight:600}
+.btn:hover{transform:translateY(-2px)}
+
+/* Works grid */
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:22px}
+.work{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(0,229,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(0,229,255,0.04);min-height:120px;position:relative}
+.work h3{margin:0 0 8px 0;font-size:1rem}
+.work p{margin:0;color:#cfeef7}
+.tag{position:absolute;top:12px;right:12px;font-size:0.77rem;padding:6px 8px;border-radius:8px;background:rgba(0,229,255,0.06);backdrop-filter: blur(2px)}
+
+/* Footer */
+footer{margin-top:32px;text-align:center;color:#98dff0;opacity:0.9}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.65);visibility:hidden;opacity:0;transition:opacity .18s ease,visibility .18s}
+.modal.open{visibility:visible;opacity:1}
+.modal .dialog{width:min(820px,94%);background:linear-gradient(180deg,#050506 0%, #0a0a0c 100%);padding:22px;border-radius:10px;border:1px solid rgba(0,229,255,0.06)}
+
+/* Neon underline */
+.neon-underline{position:relative;display:inline-block}
+.neon-underline:after{content:"";position:absolute;left:0;right:0;height:4px;bottom:-6px;background:linear-gradient(90deg, transparent, var(--neon), transparent);filter:blur(6px);opacity:0.9}
+
+/* small screens */
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr}
+  .brand h1{font-size:0.98rem}
+  .logo{width:46px;height:46px}
+}
+
+/* subtle animations */
+.glow{animation:glow 2.4s infinite}
+@keyframes glow{0%{box-shadow:0 0 8px rgba(0,229,255,0.06)}50%{box-shadow:0 0 26px rgba(0,229,255,0.12)}100%{box-shadow:0 0 8px rgba(0,229,255,0.06)}}
+
+/* focus outlines */
+a:focus,button:focus{outline:3px solid rgba(0,229,255,0.08);outline-offset:2px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo glow">ES</div>
+        <div>
+          <h1>Portfólio Literário</h1>
+          <div style="font-size:0.85rem;color:#9feeff;opacity:0.9">Frases • Poesias • Reflexões</div>
+        </div>
+      </div>
+      <nav aria-label="Navegação principal">
+        <a href="#works">Trabalhos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contato">Contato</a>
+        <button class="btn" id="openContact">Contato rápido</button>
+      </nav>
+    </header><main class="hero">
+  <section class="intro card">
+    <h2 class="neon-underline">Apresentação</h2>
+    <p class="lead">Sou escritora e criadora de conteúdo literário. Produzo frases, poesias e reflexões que unem técnica e sensibilidade, com o objetivo de inspirar, provocar e transformar o olhar sobre o cotidiano.</p>
+    <div class="typewriter" id="typewriter" aria-live="polite"></div>
+
+    <div style="display:flex;gap:12px;margin-top:18px;align-items:center">
+      <div class="meta">
+        <div style="font-size:0.93rem">Portfólio conciso e objetivo</div>
+      </div>
+    </div>
+
+    <div class="works" id="highlights" aria-label="Destaques">
+      <!-- exemplos de obras; substitua pelo conteúdo real -->
+      <article class="work" tabindex="0">
+        <div class="tag">Frase</div>
+        <h3>Vestígio de silêncio</h3>
+        <p>Onde o tempo esquece o nome, eu escrevo para lembrar.</p>
+      </article>
+
+      <article class="work" tabindex="0">
+        <div class="tag">Poema</div>
+        <h3>Horizonte mínimo</h3>
+        <p>O dia dobra as suas pontas, e eu aprendo a costurar o azul.</p>
+      </article>
+
+      <article class="work" tabindex="0">
+        <div class="tag">Reflexão</div>
+        <h3>Rotina e mistério</h3>
+        <p>Aprendi que o comum é a matéria-prima do surpreendente.</p>
+      </article>
+    </div>
+
+  </section>
+
+  <aside class="card">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <strong>Informações</strong>
+        <div class="actions">
+          <button class="btn" id="themeToggle">Glow off</button>
+        </div>
+      </div>
+
+      <div style="font-size:0.95rem;color:#cfeef7">Áreas: <strong>Frases • Poesias • Microcontos • Conteúdo</strong></div>
+
+      <div style="margin-top:8px">
+        <small style="color:#9feeff;opacity:0.88">Interaja com os trabalhos clicando neles para abrir uma visualização ampliada.</small>
+      </div>
+
+      <div style="margin-top:16px">
+        <button class="btn" id="seeMore">Ver mais obras</button>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<section id="works" class="card" style="margin-top:22px">
+  <h2 class="neon-underline">Coleção</h2>
+  <div class="works" id="worksGrid" style="margin-top:12px">
+    <!-- grid dinâmico -->
+  </div>
+</section>
+
+<section id="about" class="card" style="margin-top:18px">
+  <h2 class="neon-underline">Sobre a escritora</h2>
+  <p style="margin-top:8px;color:#cfeef7;line-height:1.6">Escritora dedicada que explora a tensão entre técnica e sensibilidade. Trabalha com formatos curtos e médios, publicações digitais e textos autorais para projetos culturais e marcas que buscam linguagem poética e reflexiva.</p>
+</section>
+
+<section id="contato" class="card" style="margin-top:18px">
+  <h2 class="neon-underline">Contato</h2>
+  <p style="margin-top:8px">Para propostas, parcerias ou leituras: <strong></strong></strong></p>
+  <p style="font-size:0.9rem;opacity:0.9">Ou use o botão de contato rápido no topo — uma caixa modal abrirá para mensagem direta.</p>
+</section>
+
+<footer>
+  <div>© <span id="year"></span> — Portfólio literário</div>
+</footer>
+
+  </div>  <!-- Modal -->  <div class="modal" id="modal">
+    <div class="dialog">
+      <h3 id="modalTitle">Amostra</h3>
+      <p id="modalBody">Conteúdo ampliado aqui.</p>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:12px">
+        <button class="btn" id="closeModal">Fechar</button>
+      </div>
+    </div>
+  </div>  <script>
+    // Conteúdo dinâmico: ano atual
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typewriter (efeito de frases rotativas)
+    const lines = [
+      'Frases que atravessam o óbvio.',
+      'Poesia que respira cotidiano.',
+      'Reflexões para olhar outra vez.'
+    ];
+    const target = document.getElementById('typewriter');
+    let li = 0, ch = 0, forward = true;
+    function type(){
+      const str = lines[li];
+      if(forward){
+        ch++;
+        target.textContent = str.slice(0,ch);
+        if(ch===str.length){forward=false;setTimeout(type,1200);return}
+      } else {
+        ch--;
+        target.textContent = str.slice(0,ch);
+        if(ch===0){forward=true;li=(li+1)%lines.length}
+      }
+      setTimeout(type,80 + Math.random()*40);
+    }
+    type();
+
+    // Modal behavior — reutilizável para cada trabalho
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    document.querySelectorAll('.work').forEach(w=>{
+      w.addEventListener('click',()=>{
+        modalTitle.textContent = w.querySelector('h3').textContent;
+        modalBody.textContent = w.querySelector('p').textContent + '\n\n(Exibição ampliada — substitua pelo texto completo.)';
+        modal.classList.add('open');
+      });
+      w.addEventListener('keydown',e=>{ if(e.key==='Enter') w.click(); })
+    });
+    document.getElementById('closeModal').addEventListener('click',()=>modal.classList.remove('open'));
+    document.getElementById('openContact').addEventListener('click',()=>{
+      modalTitle.textContent = 'Contato rápido';
+      modalBody.innerHTML = 'Envie sua mensagem para: <br><strong>seu-email@exemplo.com</strong><br><br><label>Mensagem:<br><textarea id="msg" rows="5" style="width:100%;margin-top:6px;background:#050607;color:#dff8ff;border:1px solid rgba(0,229,255,0.06);padding:8px;border-radius:6px"></textarea></label>';modal.classList.add('open');
+  // grava em localStorage como rascunho (simples)
+  setTimeout(()=>{const ta=document.getElementById('msg'); if(!ta) return; ta.value = localStorage.getItem('portfolio_msg')||''; ta.addEventListener('input',()=>localStorage.setItem('portfolio_msg',ta.value))},80);
+});
+
+// Theme toggle: reduz glow para versão menos neon
+const themeToggle = document.getElementById('themeToggle');
+let neonOn = true;
+themeToggle.addEventListener('click',()=>{
+  neonOn = !neonOn;
+  document.querySelectorAll('.glow').forEach(el=>el.style.boxShadow = neonOn ? '' : 'none');
+  themeToggle.textContent = neonOn ? 'Glow off' : 'Glow on';
+});
+
+// Preencher grid dinâmico com amostras (exemplos) — substitua com dados reais
+const sample = [
+  {type:'Poema',title:'Acordo das Ondas',text:'As ondas me ensinaram a perder o fôlego e ganhar calma.'},
+  {type:'Frase',title:'Fio',text:'Cada silêncio é um fio que nos costura ao presente.'},
+  {type:'Microconto',title:'A Janela',text:'Ela abriu a janela e deixou o dia entrar com as mãos vazias.'},
+  {type:'Reflexão',title:'Sobre o sopro',text:'O sopro que passamos adiante é patrimônio do mundo.'}
+];
+const grid = document.getElementById('worksGrid');
+sample.forEach(s=>{
+  const a = document.createElement('article'); a.className='work'; a.tabIndex=0;
+  a.innerHTML = `<div class="tag">${s.type}</div><h3>${s.title}</h3><p>${s.text}</p>`;
+  a.addEventListener('click',()=>{
+    modalTitle.textContent = s.title;
+    modalBody.textContent = s.text + '\n\n(Conteúdo completo pode ser colocado aqui.)';
+    modal.classList.add('open');
+  });
+  grid.appendChild(a);
+});
+
+// Botão ver mais — simula carregamento e foca no grid
+document.getElementById('seeMore').addEventListener('click',()=>{
+  document.getElementById('works').scrollIntoView({behavior:'smooth'});
+});
+
+// acessibilidade: fechar modal com ESC
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') modal.classList.remove('open') });
+
+// Sugestão: para publicar, basta renomear arquivo para index.html e hospedar.
+
+  </script>
+</body>
+  </html>
